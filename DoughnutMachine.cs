@@ -25,13 +25,13 @@ namespace RusBianca_laborator1
         private void InitializeComponent()
         {
             this.doughnutTimer = new DispatcherTimer();
-            this.doughnutTimer.Tick += new System.EventHandler(this.doughnutTimer_Tick);
+            this.doughnutTimer.Tick += new System.EventHandler(this.DoughnutTimer_Tick);
         }
         public DoughnutMachine()
         {
             InitializeComponent();
         }
-        private void doughnutTimer_Tick(object sender, EventArgs e)
+        private void DoughnutTimer_Tick(object sender, EventArgs e)
         {
             Doughnut aDoughnut = new Doughnut(this.Flavor);
             DoughnutComplete();
@@ -73,7 +73,8 @@ namespace RusBianca_laborator1
         Chocolate,
         Vanilla
     }
-    class Doughnut
+
+     public class Doughnut
     {
         private DoughnutType mFlavor;
 
